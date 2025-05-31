@@ -47,9 +47,13 @@
                 var year = Console.ReadLine();
                 if (int.TryParse(year, out int result))
                 {
-                    return result;
+                    var currentYear = DateTime.Today.Year;
+                    if(result == currentYear)
+                    {
+                        return result;
+                    }
                 }
-                Console.WriteLine("Invalid input. Please enter a valid year.");
+                Console.WriteLine("Input not matching current year.");
             }
         }
 
